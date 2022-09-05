@@ -1,4 +1,4 @@
-# Money for Books: Instructions
+# Money for Books
 
 Write a program that tells users if they have enough money to buy their desired number of books. 
 
@@ -43,6 +43,11 @@ You need $24 more to buy that number of books
 - Ask the user to enter desired number of books and money
 - Store the values the user enters in appropriately named variables
 - Use an if/else statement to show the user a different response, depending on the calculations on what they entered.
+
+## Testing
+
+1. First, run the code yourself with `python3 main.py`
+2. Next, run the automated tests to check your solution, with `python3 test.py`
 
 ## Hints
 
