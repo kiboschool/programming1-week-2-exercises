@@ -1,4 +1,4 @@
-# Exam Results: Instructions  
+# Exam Results: Instructions
 
 Write a program that lets a user enter their exam score, then tells the user if they have passed the exam. The user must score more than 70 to pass the exam.
 
@@ -25,6 +25,12 @@ With a failing score:
 What is you score? 50
 Try again
 ```
+
+## Testing
+
+1. First, run your code interactively with `python3 main.py` and try different
+   values.
+2. Next, run the automated tests with `python3 test.py` to check your code.
 
 ## Hints
 
