@@ -16,14 +16,15 @@ water_slice_two_upper_bound = 2500
 
 # Implementation
 mode = input("Enter the type of bill you want to calculate: \n 1)Electricity \n 2)Water \n Your Choice: ")
+
+if int(mode) != 1 and int(mode) != 2:
+    print(f"Usage: mode should be a number within the list")
+    exit(0)
+
 meter_reading = input("Enter your meter reading - KwH for Electricity & m^3 for water: ")
 
 if not meter_reading.isnumeric():
     print("Please enter a numerical meter reading")
-    exit(0)
-
-if int(mode) != 1 and int(mode) != 2:
-    print(f"Usage: mode should be a number within the list")
     exit(0)
 
 mode = int(mode)
