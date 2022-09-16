@@ -50,3 +50,9 @@ Add a quick feature to let the user know if usage is **normal** or **above avera
     - For electricity: let the normal per person usage equal to 300
     - For water: let the normal per person usage equal to 5000
  - Change fixed values to check that your code works fine
+ - Output Examples: find below some examples for the new expected output
+ 
+ ![image](assets/bonus_item_water_above_average.PNG)
+ 
+ ![image](assets/bonus_item_ele_normal.PNG)
+ 
