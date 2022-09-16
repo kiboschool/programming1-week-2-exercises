@@ -36,9 +36,17 @@ Check the file called `main.py` for the general expected structure of the code. 
 Here are some running examples:
 - Successful inputs with calculated output: ![image](assets/success_run.PNG)
 
-- Failure on first input (bill type): ![image](assets/failure_input_1.PNG)
+- Failure on first input (bill type):       ![image](assets/failure_input_1.PNG)
 
 - Failure on second input (meter reading): ![image](assets/failure_input_2.PNG)
 
 ## Bonus Item 
-After you manage to finish all of the above -> Add the feature to save result for the last 3 users, and show max and min for them.
+Add a quick feature to let the user know if usage is **normal** or **above average**
+ - Add another question to ask the user for the number of household
+ - Perform input validation for this new input also -> it should be numeric and between 0 = 20
+ - Try to use fixed values as you did before
+ - Calculate the the usage per person by: __usage per person = (bill/household)__
+ - Check the per person usage exceeds normal value:
+    - For electricity: let the normal per person usage equal to 300
+    - For water: let the normal per person usage equal to 5000
+ - Change fixed values to check that your code works fine
