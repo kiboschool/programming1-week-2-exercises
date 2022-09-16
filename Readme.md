@@ -36,7 +36,7 @@ Check the file called `main.py` for the general expected structure of the code. 
 Here are some running examples:
 - Successful inputs with calculated output: ![image](assets/success_run.PNG)
 
-- Failure on first input (bill type):       <img src="assets/failure_input_1.PNG" alt="drawing" width="500"/>
+- Failure on first input (bill type):       <img src="assets/failure_input_1.PNG" alt="drawing" width="600"/>
 
 - Failure on second input (meter reading): ![image](assets/failure_input_2.PNG)
 
