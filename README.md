@@ -1,4 +1,4 @@
-# Exam Results: Instructions
+# Exam Results
 
 Write a program that lets a user enter their exam score, then tells the user if they have passed the exam. The user must score more than 70 to pass the exam.
 
