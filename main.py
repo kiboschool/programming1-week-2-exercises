@@ -15,7 +15,7 @@ low_water_limit = 250
 med_water_limit = 1500
 
 # Implementation
-bill_type = input("Enter the type of bill you want to calculate: \n 1)Electricity \n 2)Water \n Your Choice: ")
+bill_type = input("Enter the type of bill you want to calculate: \n 1) Electricity\n 2) Water\n Your Choice: ")
 
 if not (bill_type.isnumeric() and (int(bill_type) == 1 or int(bill_type) == 2)):
     print(f"Error: enter a number to choose a bill type from the list")
