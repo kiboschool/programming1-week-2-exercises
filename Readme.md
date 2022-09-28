@@ -1,58 +1,106 @@
-## Bill Calculator
-In this project you will build a program that calculates two types of bills: 1) Electricity 2) Water
+# Bill Calculator
 
-## Program Flow & Task Description
-The program should start by asking a user what kind of bill he/she wants to calculate by choosing a number from the list.
-- Bill type can be
-    1. Electricity
-    2. Water
-- When a user provides a choice. Another question should be posted concerning meter reading. Reading are to be accepted in KwH for electricity and m^3 for water.
-- After all inputs are allocated - some kind of a loading/calculating message should be posted and then the calculated bill value is to be posted in a separate line.
+Utility bills are subject to lots of regulations. There are a ton of rules that
+govern how much water and electricity cost, based on many different factors. 
+Thankfully, you've been practicing with conditional statements. Conditions help
+represent rules in Python programs.
 
-Please check Example part to check the clear flow of questions that are expected within the program.
+In this project, you will build a program to help calculate Electricity and 
+Water bills, turning the utility bill rules into conditions and boolean logic.
 
-## Guidelines
-- **Bill Calculation:** you need to use many __if__ statements with several conditions to calculate bills:
-- Electricity
-    - first 100 kwH are 5 $ per kwH including 100
-    - from 100 kwH to 1000 kwH are 10 $ per kwH
-    - After 1000 kwH are 15 $ per kwH
-- Water
-    - first 500 m^3 are 50 $ per m^3 not including 500
-    - from 500 m^3 to 2500 m^3 are 60 $ per m^3
-    - After 2500 kwH are 70 $ per kwH
-    
-- **Input Validation:** your program should **NOT** crash when a user inputs a wrong value. Your code should be able to let the user know that the input is not correct.
-For example, if a user enters the value __5__ at the bill list which have __1__ and __2__ only -> the program is expected to print a **Usage** statement and guide the user to input a correct value. The program is expected to exit at this point with no further processing.
-Input validation should cover both questions: Bill type and Meter reading.
+## Your Task
 
-- **Slices:** As specified at point one, price is to be sliced into three ranges, each with a price. You may need to define these fixed values at the beginning of your program so that you can easily use them within the code.
-This is also useful if these numbers change. Imagine that a unit price changes frequently -> you only need to change your fixed values leaving other parts of code intact.
+Listed below are the rules for calculating water and electricity bills. Your job
+is to turn those rules into a calculator program that can help someone determine
+what they will need to pay, based on their usage.
+
+The program should start by asking the user what type of bill they want to 
+calculate, by choosing a number from the list.
+
+```txt
+1. Electricity
+2. Water
+```
+
+Then, the program should ask for the relevant meter reading, in kilowatt-hours 
+(kwH) for electricity and cubic meters (m^3) for water. 
+
+Then, the program should display a 'calculating' message, then display the 
+calculated bill.
+
+See the Expected Results section for examples of a correctly running program.
+
+## Utility Bill Rules
+
+These are the rules that govern the bill calculation for Electricity and Water.
+You'll need to translate these into the boolean logic and math to correctly
+calculate the bills.
+
+### Electricity
+
+- The first 100 kwH: $5 per kwH 
+- 100 kwH to 1000 kwH: $10 per kwH
+- More than 1000 kwH: $15 per kwH
+
+### Water
+
+- The first 500 m^3: $50 per m^3
+- 500 m^3 to 2500 m^3: $60 per m^3
+- 2500 kwH and more $70 per kwH
+
+## Further Guidelines
+
+**Input Validation:** your program should **NOT** crash when a user enters an 
+invalid value. Your code should print an error message to let the user know that
+the input is not correct, and exit.
+
+For example, if a user enters the value **5** when the menu shows only options 
+**1** and **2**, then the program should to print an **Error** to guide the user 
+to input a correct value. The program should exit with no further processing.
+
+The program should validate all user inputs, for both bill type and meter reading.
+
+**Constant values:** As specified in the Utility Bill Rules, the price is sliced 
+into three ranges, based on the usage. You should define constant values at the 
+beginning of your program and use those variables in the rest of your program.
+Avoid magic numbers in your conditional statements!
+
+If the numbers in the Utility Bill Rules changed, you should only have to change 
+the constants at the top of your program, leaving other parts of code intact.
 
 ## Starter Code
-Check the file called `main.py` for the general expected structure of the code. Start by implementing needed TODOs.
 
-## Example Run
-Here are some running examples:
-- Successful inputs with calculated output: ![image](assets/success_run.PNG)
+Write your solution in `main.py`. The starter code contains the general expected 
+structure of the code, and lists several TODOs.
 
-- Failure on first input (bill type):       <img src="assets/failure_input_1.PNG" alt="drawing" width="600"/>
+## Expected Results
 
-- Failure on second input (meter reading): ![image](assets/failure_input_2.PNG)
+Successful inputs with calculated output: 
 
-## Bonus Item 
-Add a quick feature to let the user know if usage is **normal** or **above average**
- - Add another question to ask the user for the number of household
- - Perform input validation for this new input also -> it should be numeric and between 0 = 20
- - Try to use fixed values as you did before
- - Calculate the the usage per person by: __usage per person = (bill/household)__
- - Check the per person usage exceeds normal value:
-    - For electricity: let the normal per person usage equal to 300
-    - For water: let the normal per person usage equal to 5000
- - Change fixed values to check that your code works fine
- - Output Examples: find below some examples for the new expected output
+![successful run with valid inputs](assets/success_run.PNG)
+
+Failure on first input (bill type): 
+
+<img src="assets/failure_input_1.PNG" alt="invalid bill type input" width="600"/>
+
+Failure on second input (meter reading): 
+
+![invalid input for meter reading](assets/failure_input_2.PNG)
+
+## Bonus Task
+
+Once you have the basics working, you can try adding a feature to let the user 
+know if their usage is **normal** or **above average**
+
+- Add another question for the number people in their household
+- Remember to validate this new input (an integer between 0 and 20)
+- Calculate the the usage per person by: **usage per person = (bill/household)**
+- Check if the per person usage exceeds normal value:
+    - For electricity: assume the normal per-person usage is 300
+    - For water: assume the normal per-person usage is 5000
+
+Here are the expected results for the bonus task:
  
- ![image](assets/bonus_item_water_above_average.PNG)
+![image](assets/bonus_item_water_above_average.PNG)
  
- ![image](assets/bonus_item_ele_normal.PNG)
- 
+![image](assets/bonus_item_ele_normal.PNG)

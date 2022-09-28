@@ -1,25 +1,19 @@
 # Electricity Unit Price
-# TODO: Define missing electricity fixed values here
-electricity_slice_one_unit_price = 5
-
-electricity_max_unit_price = 15
-
-electricity_slice_one_upper_bound = 100
-electricity_slice_two_upper_bound = 1000
+# TODO: Define electricity price constants here
 
 # Water Unit Price
-# TODO: Define Water Fixed Values here
+# TODO: Define Water price constants here
 
 # Implementation
 
 # Input 1 Validation
-# bill_type =  Enter code to get the value from user
-# TODO: Enter code to check if bill type obtained from user is valid 1) numeric ? 2) supported ?
+# TODO: get the bill type from user
+# TODO: check if bill type is valid
 
 # Input 2 Validation
-# meter_reading =  Enter code to get the value from user
-# TODO: TODO: Enter code to check if meter reading obtained from user is valid 1) numeric ? 2) supported ?
+# TODO: get the meter reading from the user
+# TODO: check if meter reading is valid
 
 # Bill Calculation
-# TODO: Enter code to calculate bill
+# TODO: calculate and display the bill
 
