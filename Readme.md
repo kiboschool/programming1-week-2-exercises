@@ -10,8 +10,8 @@ Water bills, turning the utility bill rules into conditions and boolean logic.
 
 ## Your Task
 
-Listed below are the rules for calculating water and electricity bills. Your job
-is to turn those rules into a calculator program that can help someone determine
+Listed below are the rates for calculating water and electricity bills. Your job
+is to turn those rates into a calculator program that can help someone determine
 what they will need to pay, based on their usage.
 
 The program should start by asking the user what type of bill they want to 
@@ -30,7 +30,7 @@ calculated bill.
 
 See the Expected Results section for examples of a correctly running program.
 
-## Utility Bill Rules
+## Utility Bill Rates
 
 These are the rules that govern the bill calculation for Electricity and Water.
 You'll need to translate these into the boolean logic and math to correctly
@@ -60,12 +60,12 @@ to input a correct value. The program should exit with no further processing.
 
 The program should validate all user inputs, for both bill type and meter reading.
 
-**Constant values:** As specified in the Utility Bill Rules, the price is sliced 
+**Constant values:** As specified in the Utility Bill Rates, the price is sliced 
 into three ranges, based on the usage. You should define constant values at the 
 beginning of your program and use those variables in the rest of your program.
 Avoid magic numbers in your conditional statements!
 
-If the numbers in the Utility Bill Rules changed, you should only have to change 
+If the numbers in the Utility Bill Rates changed, you should only have to change 
 the constants at the top of your program, leaving other parts of code intact.
 
 ## Starter Code
