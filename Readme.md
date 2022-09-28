@@ -75,17 +75,52 @@ structure of the code, and lists several TODOs.
 
 ## Expected Results
 
-Successful inputs with calculated output: 
+Successfully calculating Electricity bill: 
 
-![successful run with valid inputs](assets/success_run.PNG)
+```txt
+$ python main.py
+Enter the type of bill you want to calculate:
+ 1) Electricity
+ 2) Water
+ Your Choice: 1
+Enter your electric meter reading in kwH: 14
+Calculating Electricity bill...
+Your total Electricity bill is $70
+```
+
+Successfully calculating Water bill: 
+```txt
+$ python main.py
+Enter the type of bill you want to calculate:
+ 1) Electricity
+ 2) Water
+ Your Choice: 2
+Enter your water meter reading in m^3: 621
+Calculating Water bill...
+Your total Water bill is $37260
+```
 
 Failure on first input (bill type): 
 
-<img src="assets/failure_input_1.PNG" alt="invalid bill type input" width="600"/>
+```txt
+$ python main.py
+Enter the type of bill you want to calculate:
+ 1) Electricity
+ 2) Water
+ Your Choice: 5
+Error: enter a number to choose a bill type from the list
+```
 
 Failure on second input (meter reading): 
-
-![invalid input for meter reading](assets/failure_input_2.PNG)
+```txt
+$ python main.py
+Enter the type of bill you want to calculate:
+ 1) Electricity
+ 2) Water
+ Your Choice: 2
+Enter your water meter reading in m^3: two thousand meters cubed
+Error: Please enter a numerical meter reading
+```
 
 ## Bonus Task
 
