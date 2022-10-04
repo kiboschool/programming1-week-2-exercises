@@ -1,6 +1,6 @@
 # Money for Books
 
-Write a program that tells users if they have enough money to buy their desired number of books. 
+Write a program that tells users if they have enough money to buy their desired number of books.
 
 Each book costs $20. The program should ask the user to enter how many books they want to buy, and how much money they have.
 
@@ -47,9 +47,9 @@ You need $24 more to buy that number of books
 ## Testing
 
 1. First, run the code yourself with `python3 main.py`
-2. Next, run the automated tests to check your solution, with `python3 test.py`
+2. Next, run the automated tests to check your solution, with `python3 test_main.py`
 
 ## Hints
 
-* Be mindful of the string you print out! The tests are picky. 
+* Be mindful of the string you print out! The tests are picky.
 * Copy and paste instead of typing it out, so that it's exactly the same.
