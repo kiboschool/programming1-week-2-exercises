@@ -30,7 +30,7 @@ Try again
 
 1. First, run your code interactively with `python3 main.py` and try different
    values.
-2. Next, run the automated tests with `python3 test.py` to check your code.
+2. Next, run the automated tests with `python3 test_main.py` to check your code.
 
 ## Hints
 
