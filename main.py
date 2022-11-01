@@ -11,8 +11,11 @@ PRICE_WATER_LOW_LITERS = 50
 PRICE_WATER_MED_LITERS = 60
 PRICE_WATER_HIGH_LITERS = 70
 
-LIMIT_METER_LOW = 250
-LIMIT_METER_MED = 1500
+LIMIT_METER_LOW = 500
+LIMIT_METER_MED = 2500
+
+BILL_TYPE_ELECTRICITY = 1
+BILL_TYPE_WATER = 2
 
 # Implementation
 bill_type = input(
@@ -35,7 +38,7 @@ if not meter_reading.isnumeric():
 
 meter_reading = int(meter_reading)
 
-if bill_type == 1:
+if bill_type == BILL_TYPE_ELECTRICITY:
     print(f"Calculating Electricity bill...")
 
     if 0 < meter_reading <= LIMIT_KWH_LOW:
@@ -47,7 +50,7 @@ if bill_type == 1:
 
     print(f"Your total Electricity bill is ${bill_amount}")
 
-elif bill_type == 2:
+elif bill_type == BILL_TYPE_WATER:
     print(f"Calculating Water bill...")
 
     if 0 < meter_reading <= LIMIT_METER_LOW:
@@ -56,6 +59,8 @@ elif bill_type == 2:
         bill_amount = meter_reading * PRICE_WATER_MED_LITERS
     else:
         bill_amount = meter_reading * PRICE_WATER_HIGH_LITERS
+
+    print(f"Your total Water bill is ${bill_amount}")
 
     print(f"Your total Water bill is ${bill_amount}")
 
