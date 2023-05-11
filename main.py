@@ -34,6 +34,7 @@ elif bill_type == 2:
 
 if not meter_reading.isnumeric():
     print("Error: Please enter a numerical meter reading")
+    print(meter_reading)
     exit()
 
 meter_reading = int(meter_reading)
