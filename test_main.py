@@ -3,9 +3,12 @@ from unittest import TestCase
 import unittest
 import sys
 
+from gradescope_utils.autograder_utils.decorators import weight
+
 class Test(TestCase):
     @patch('builtins.print')
     @patch('builtins.input', side_effect=["1", "21"])
+    @weight(10)
     def test_enough_for_one(self, mock_input, mock_print):
         import main
         try:
@@ -15,6 +18,7 @@ class Test(TestCase):
 
     @patch('builtins.print')
     @patch('builtins.input', side_effect=["3", "61"])
+    @weight(10)
     def test_enough_for_three(self, mock_input, mock_print):
         import main
         try:
@@ -24,6 +28,7 @@ class Test(TestCase):
 
     @patch('builtins.print')
     @patch('builtins.input', side_effect=["1", "19"])
+    @weight(10)
     def test_short_for_one(self, mock_input, mock_print):
         import main
         try:
@@ -33,6 +38,7 @@ class Test(TestCase):
 
     @patch('builtins.print')
     @patch('builtins.input', side_effect=["3", "15"])
+    @weight(10)
     def test_short_for_three(self, mock_input, mock_print):
         import main
         try:
