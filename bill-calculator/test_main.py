@@ -8,7 +8,7 @@ import logging
 from gradescope_utils.autograder_utils.decorators import weight
 
 class Test(TestCase):
-    @weight(20)
+    @weight(0.5)
     def test_invalid_bill_type(self):
         with patch('sys.stdout', new=io.StringIO()) as mock_stdout, patch('builtins.input') as mock_input:
             for invalid_input in ['3', '-1', 'a', 'jklj123lj', '']:
@@ -25,7 +25,7 @@ class Test(TestCase):
                         pass
 
     @patch('builtins.input', side_effect=["1", "76"])
-    @weight(10)
+    @weight(0.5)
     def test_elec_bill_low_rate(self, mock_input):
         expected_bill = 380
         with patch('sys.stdout', new=io.StringIO()) as mock_stdout:
@@ -34,7 +34,7 @@ class Test(TestCase):
         self.assertTrue(str(expected_bill) in mock_stdout.getvalue())
 
     @patch('builtins.input', side_effect=["1", "440"])
-    @weight(10)
+    @weight(0.5)
     def test_elec_bill_med_rate(self, mock_input):
         expected_bill = 4400
         with patch('sys.stdout', new=io.StringIO()) as mock_stdout:
@@ -43,7 +43,7 @@ class Test(TestCase):
         self.assertTrue(str(expected_bill) in mock_stdout.getvalue())
 
     @patch('builtins.input', side_effect=["1", "1500"])
-    @weight(10)
+    @weight(0.5)
     def test_elec_bill_high_rate(self, mock_input):
         expected_bill = 22500
         with patch('sys.stdout', new=io.StringIO()) as mock_stdout:
@@ -52,7 +52,7 @@ class Test(TestCase):
         self.assertTrue(str(expected_bill) in mock_stdout.getvalue())
 
     @patch('builtins.input', side_effect=["2", "401"])
-    @weight(10)
+    @weight(0.5)
     def test_water_bill_low_rate(self, mock_input):
         expected_bill = 20050
         with patch('sys.stdout', new=io.StringIO()) as mock_stdout:
@@ -61,7 +61,7 @@ class Test(TestCase):
         self.assertTrue(str(expected_bill) in mock_stdout.getvalue())
 
     @patch('builtins.input', side_effect=["2", "1900"])
-    @weight(10)
+    @weight(0.5)
     def test_water_bill_med_rate(self, mock_input):
         expected_bill = 114000
         with patch('sys.stdout', new=io.StringIO()) as mock_stdout:
@@ -70,7 +70,7 @@ class Test(TestCase):
         self.assertTrue(str(expected_bill) in mock_stdout.getvalue())
 
     @patch('builtins.input', side_effect=["2", "3500"])
-    @weight(10)
+    @weight(0.5)
     def test_water_bill_high_rate(self, mock_input):
         expected_bill = 245000
         with patch('sys.stdout', new=io.StringIO()) as mock_stdout:

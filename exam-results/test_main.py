@@ -3,9 +3,12 @@ from unittest import TestCase
 import unittest
 import sys
 
+from gradescope_utils.autograder_utils.decorators import weight
+
 class Test(TestCase):
     @patch('builtins.print')
     @patch('builtins.input', side_effect=["99"])
+    @weight(0.5)
     def test_high_score(self, mock_input, mock_print):
         import main
         try:
@@ -15,6 +18,7 @@ class Test(TestCase):
 
     @patch('builtins.print')
     @patch('builtins.input', side_effect=["65"])
+    @weight(0.5)
     def test_fail(self, mock_input, mock_print):
         import main
         try:
@@ -24,6 +28,7 @@ class Test(TestCase):
 
     @patch('builtins.print')
     @patch('builtins.input', side_effect=["70"])
+    @weight(0.5)
     def test_70(self, mock_input, mock_print):
         import main
         try:
@@ -33,6 +38,7 @@ class Test(TestCase):
 
     @patch('builtins.print')
     @patch('builtins.input', side_effect=["71"])
+    @weight(0.5)
     def test_71(self, mock_input, mock_print):
         import main
         try:
