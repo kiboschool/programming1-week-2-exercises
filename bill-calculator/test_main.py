@@ -24,7 +24,7 @@ class Test(TestCase):
                 self.assertTrue('error' in mock_stdout.getvalue().lower())
                 
 
-    @patch('builtins.input', side_effect=["1", "76"])
+    @patch('builtins.input', side_effect=["1", "76", "10"])
     @weight(0.5)
     def test_elec_bill_low_rate(self, mock_input):
         expected_bill = 380
@@ -33,7 +33,7 @@ class Test(TestCase):
             sys.modules.pop('main')
         self.assertTrue(str(expected_bill) in mock_stdout.getvalue())
 
-    @patch('builtins.input', side_effect=["1", "440"])
+    @patch('builtins.input', side_effect=["1", "440", "10"])
     @weight(0.5)
     def test_elec_bill_med_rate(self, mock_input):
         expected_bill = 4400
@@ -42,7 +42,7 @@ class Test(TestCase):
             sys.modules.pop('main')
         self.assertTrue(str(expected_bill) in mock_stdout.getvalue())
 
-    @patch('builtins.input', side_effect=["1", "1500"])
+    @patch('builtins.input', side_effect=["1", "1500", "10"])
     @weight(0.5)
     def test_elec_bill_high_rate(self, mock_input):
         expected_bill = 22500
@@ -51,7 +51,7 @@ class Test(TestCase):
             sys.modules.pop('main')
         self.assertTrue(str(expected_bill) in mock_stdout.getvalue())
 
-    @patch('builtins.input', side_effect=["2", "401"])
+    @patch('builtins.input', side_effect=["2", "401", "10"])
     @weight(0.5)
     def test_water_bill_low_rate(self, mock_input):
         expected_bill = 20050
@@ -60,7 +60,7 @@ class Test(TestCase):
             sys.modules.pop('main')
         self.assertTrue(str(expected_bill) in mock_stdout.getvalue())
 
-    @patch('builtins.input', side_effect=["2", "1900"])
+    @patch('builtins.input', side_effect=["2", "1900", "10"])
     @weight(0.5)
     def test_water_bill_med_rate(self, mock_input):
         expected_bill = 114000
@@ -69,7 +69,7 @@ class Test(TestCase):
             sys.modules.pop('main')
         self.assertTrue(str(expected_bill) in mock_stdout.getvalue())
 
-    @patch('builtins.input', side_effect=["2", "3500"])
+    @patch('builtins.input', side_effect=["2", "3500", "10"])
     @weight(0.5)
     def test_water_bill_high_rate(self, mock_input):
         expected_bill = 245000
