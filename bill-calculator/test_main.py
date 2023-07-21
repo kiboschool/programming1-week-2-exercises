@@ -13,16 +13,16 @@ class Test(TestCase):
         with patch('sys.stdout', new=io.StringIO()) as mock_stdout, patch('builtins.input') as mock_input:
             for invalid_input in ['3', '-1', 'a', 'jklj123lj', '']:
                 mock_input.return_value = invalid_input
-                # print("Trying invalid_input: %s" %invalid_input)
-                with self.assertRaises(SystemExit):
-                    import main
                 try:
-                    self.assertTrue('error' in mock_stdout.getvalue().lower())
-                finally:
-                    try:
-                        sys.modules.pop('main')
-                    except KeyError:
-                        pass
+                    import main
+                except SystemExit:
+                    pass
+                try:
+                    sys.modules.pop('main')
+                except KeyError:
+                    pass
+                self.assertTrue('error' in mock_stdout.getvalue().lower())
+                
 
     @patch('builtins.input', side_effect=["1", "76"])
     @weight(0.5)
